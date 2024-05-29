@@ -1,4 +1,4 @@
-rootProject.name = "compose-multiplatform-news-app"
+rootProject.name = "compose-multiplatform-app"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {

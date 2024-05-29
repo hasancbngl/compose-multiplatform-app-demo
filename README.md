@@ -1,1 +1,2 @@
-//this app uses my template from github 
+# Kotlin Multiplatform App 
+

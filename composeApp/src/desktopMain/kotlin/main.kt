@@ -5,7 +5,7 @@ import data.KoinInitializer
 fun main() = application {
     Window(
         onCloseRequest = ::exitApplication,
-        title = "Compose Multiplatform News App",
+        title = "kmp-mvvm-shared-viewmodel-room-koin",
     ) {
         KoinInitializer().init()
         App()

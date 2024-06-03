@@ -4,19 +4,23 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
-import domain.AppEntity
+import data.local.entity.LocalProduct
 import kotlinx.coroutines.flow.Flow
+
 @Dao
 interface AppDao {
     @Insert
-    suspend fun addData(appEntity: AppEntity)
+    suspend fun addLocalProducts(products: List<LocalProduct>)
 
     @Update
-    suspend fun updateData(appEntity: AppEntity)
+    suspend fun updateLocalProducts(products: List<LocalProduct>)
 
-    @Query("DELETE FROM appEntityTable WHERE id = :id")
+    @Query("DELETE FROM products WHERE id = :id")
     suspend fun deleteData(id: Int)
 
-    @Query("SELECT * FROM appEntityTable")
-    fun readData(): Flow<List<AppEntity>>
+    @Query("DELETE FROM products")
+    suspend fun clearDB()
+
+    @Query("SELECT * FROM products")
+    fun getAllLocalProducts(): Flow<List<LocalProduct>>
 }

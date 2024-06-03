@@ -3,8 +3,6 @@ package presentation.main
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import data.repository.AppRepository
-import domain.AppEntity
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class MainViewModel(

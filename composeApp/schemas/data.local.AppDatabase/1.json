@@ -2,36 +2,57 @@
   "formatVersion": 1,
   "database": {
     "version": 1,
-    "identityHash": "b38e71680f70dfbd317ab06f8db07742",
+    "identityHash": "bdce17b9dbbfaf9daafd6b1c38ac5aca",
     "entities": [
       {
-        "tableName": "appEntityTable",
-        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `title` TEXT NOT NULL)",
+        "tableName": "products",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`category` TEXT, `description` TEXT, `id` INTEGER, `image` TEXT, `price` REAL, `rating` TEXT, `title` TEXT)",
         "fields": [
+          {
+            "fieldPath": "category",
+            "columnName": "category",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT"
+          },
           {
             "fieldPath": "id",
             "columnName": "id",
-            "affinity": "INTEGER",
-            "notNull": true
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "image",
+            "columnName": "image",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "price",
+            "columnName": "price",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "rating",
+            "columnName": "rating",
+            "affinity": "TEXT"
           },
           {
             "fieldPath": "title",
             "columnName": "title",
-            "affinity": "TEXT",
-            "notNull": true
+            "affinity": "TEXT"
           }
         ],
         "primaryKey": {
-          "autoGenerate": true,
-          "columnNames": [
-            "id"
-          ]
+          "autoGenerate": false,
+          "columnNames": []
         }
       }
     ],
     "setupQueries": [
       "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
-      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'b38e71680f70dfbd317ab06f8db07742')"
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'bdce17b9dbbfaf9daafd6b1c38ac5aca')"
     ]
   }
 }

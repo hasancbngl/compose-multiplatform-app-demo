@@ -5,7 +5,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import data.repository.AppRepository
-import domain.AppEntity
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 

@@ -1,7 +1,6 @@
 package data.repository
 
 import data.local.AppDao
-import domain.AppEntity
 import io.ktor.client.HttpClient
 import kotlinx.coroutines.flow.Flow
 
@@ -27,6 +26,6 @@ class AppRepository(
     }
 
     fun readData(): Flow<List<AppEntity>> {
-        return appDao.readData()
+        return appDao.getAllProducts()
     }
 }

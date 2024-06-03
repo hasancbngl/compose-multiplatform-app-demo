@@ -2,9 +2,13 @@ package data.repository
 
 import data.local.AppDao
 import domain.AppEntity
+import io.ktor.client.HttpClient
 import kotlinx.coroutines.flow.Flow
 
-class AppRepository(private val appDao: AppDao) {
+class AppRepository(
+    private val appDao: AppDao,
+    private val httpClient: HttpClient
+) {
 
     suspend fun addData(appEntity: AppEntity) {
         appDao.addData(appEntity)

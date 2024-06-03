@@ -76,6 +76,7 @@ kotlin {
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
             implementation(libs.kotlinx.coroutines.jvm)
+            implementation(libs.ktor.client.cio)
             implementation("org.jetbrains.kotlinx:kotlinx-coroutines-swing")
             implementation("io.coil-kt.coil3:coil-network-okhttp:3.0.0-alpha06")
         }

@@ -16,7 +16,7 @@ interface AppDao {
     suspend fun updateLocalProducts(products: List<LocalProduct>)
 
     @Query("DELETE FROM products WHERE id = :id")
-    suspend fun deleteData(id: Int)
+    suspend fun deleteProduct(id: Int)
 
     @Query("DELETE FROM products")
     suspend fun clearDB()

@@ -10,8 +10,6 @@ class MainViewModel(
 ) : ViewModel() {
 
     fun addDummyData(){
-        viewModelScope.launch {
-            repository.addData(AppEntity(title = "data inserted from Main Screen viewmodel"))
-        }
+
     }
 }

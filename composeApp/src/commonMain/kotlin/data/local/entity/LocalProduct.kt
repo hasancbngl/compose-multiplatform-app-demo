@@ -1,12 +1,14 @@
 package data.local.entity
 
 import androidx.room.Entity
+import androidx.room.PrimaryKey
 
 @Entity(tableName = "products")
 data class LocalProduct(
+    @PrimaryKey(autoGenerate = false)
+    val id: Int? = null,
     val category: String? = null,
     val description: String? = null,
-    val id: Int? = null,
     val image: String? = null,
     val price: Double? = null,
     val rating: LocalRating? = null,

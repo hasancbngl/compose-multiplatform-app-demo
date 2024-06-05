@@ -19,7 +19,7 @@ import data.koinViewModel
 fun MainScreen(navController: NavController) {
 
     val viewModel = koinViewModel<MainViewModel>()
-    viewModel.addDummyData()
+    val products = viewModel.products.value
 
     Box(
         modifier = Modifier.fillMaxSize(),

@@ -13,14 +13,5 @@ class DetailViewModel(
     private val repository: AppRepository
 ) : ViewModel() {
 
-    private val _data : MutableState<List<Product>> = mutableStateOf(emptyList())
-    val data = _data
 
-    init {
-        viewModelScope.launch {
-            repository.readData().collectLatest {
-                _data.value = it
-            }
-        }
-    }
 }
